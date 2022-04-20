@@ -2,6 +2,7 @@ import React from 'react';
 import './FeaturedMovie.css';
 
 export const FeaturedMovie = ({ item }) => {
+  console.log(item);
   const firstDate = new Date(item.first_air_date);
   const genres = [];
   item.genres.forEach((gen) => genres.push(gen.name))
