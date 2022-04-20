@@ -11,3 +11,33 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.lists {
+    margin-top: -130px;
+}
+
+footer {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.devname {
+    color: #46d369;
+}
+
+.themoviedb {
+    color: #256B90;
+}
+
+.loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
