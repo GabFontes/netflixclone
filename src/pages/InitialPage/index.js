@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { getHomeList, getMovieInfo } from '../../apis';
 import { MovieRow, FeaturedMovie, Header } from '../../components'
 import './initialPage.css'
+// import moviesContext from '../../context/MoviesContext';
 
 export default function InitialPage() {
+  // const { setEnableInput } = useContext(moviesContext);
+  // window.onload = setEnableInput(false);
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
