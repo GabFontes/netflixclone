@@ -44,7 +44,7 @@ export const getHomeList = async () => {
     {
       slug: 'originals',
       title: 'Originais da Netflix',
-      items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
+      items: await basicFetch(`/discover/tv?with_networks=213&language=pt-BR&api_key=${API_KEY}`)
     },
     {
       slug: 'trending',
