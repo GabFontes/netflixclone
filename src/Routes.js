@@ -1,5 +1,6 @@
 import InitialPage from './pages/InitialPage';
 import SearchPage from './pages/Search';
+import NotFound from './pages/NotFound';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -9,7 +10,7 @@ function PageRouter() {
       <Routes>
         <Route path="/search" element={<SearchPage />} />
         <Route path="/" element={<InitialPage />} />
-        {/* <Route path="*" element={NotFound} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )

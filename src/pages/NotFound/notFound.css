@@ -1,0 +1,24 @@
+.notFound {
+    display: flex;
+    justify-content: center;
+    background-image: url(../../icons/layered-waves-haikei.png);
+    height: 100%;
+    /* background: ; */
+}
+
+.notFound-board {
+    background-color: #c9c9c9;
+    width: 70%;
+    margin-top: 6%;
+    display: flex;  
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+}
+
+.notFound-icons {
+    display: flex;
+}
+.notFound-title {
+    color: #0072b4;
+}
