@@ -1,28 +1,35 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
+import moviesContext from '../../context/MoviesContext';
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
 
 export const Header = ({ black }) => {
 
-  const [disable, setDisable] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  const { searchTerm, setSearchTerm, enableInput, setEnableInput } = useContext(moviesContext);
 
   return (
     <header className={black ? 'black' : ''}>
       <div className="header-logo">
         <a href="/">
           <img
+            onClick={() => navigate('/')}
             src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg"
             alt="Netflix Logo" />
         </a>
       </div>
       <div className="header-user">
-        {disable && <input
-          placeholder="Buscar por filmes e séries"
-          onChange={({ target: { value } }) => setSearchTerm(value)}
+        {enableInput && <input
           type="text"
+          placeholder="Buscar por filmes e séries"
+          value={searchTerm}
+          onChange={({ target: { value } }) => {
+            setSearchTerm(value); navigate('/search')
+          }}
         />}
-        <SearchIcon className="header-search" onClick={() => setDisable(!disable)} style={{ fontSize: 35 }} />
+        <SearchIcon className="header-search" onClick={() => setEnableInput(!enableInput)} style={{ fontSize: 35 }} />
         <a href="/">
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User Icon" />
         </a>
