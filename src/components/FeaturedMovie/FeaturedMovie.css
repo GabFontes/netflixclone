@@ -46,7 +46,12 @@
     margin-top: 15px;
     font-size: 20px;
     color:#999;
-    max-width: 40%
+    max-width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 .featured-buttons {
@@ -99,7 +104,6 @@
     }
     .featured-description {
         font-size: 14px;
-        max-width: 100%;
         margin-right: 30px
     }
     .featured-watchbutton,

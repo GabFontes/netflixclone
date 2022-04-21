@@ -15,7 +15,7 @@ export const FeaturedMovie = ({ item }) => {
       }}>
       <div className="featured-vertical-transparency">
         <div className="featured-horizontal-transparency">
-          <div className="featured-name">{item.original_name}</div>
+          <div className="featured-name">{item.name}</div>
           <div className="featured-info">
             <div className="featured-average">{item.vote_average} pontos</div>
             <div className="featured-release">{firstDate.getFullYear()}</div>
