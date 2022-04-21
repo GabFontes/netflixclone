@@ -4,7 +4,8 @@ import moviesContext from '../../context/MoviesContext';
 
 export function SearchedItems({ items }) {
   const { searchTerm, setEnableInput } = useContext(moviesContext);
-  window.onload = setEnableInput(true);
+  window.onload = () => setEnableInput(true);
+
   let allItems = [];
 
   items.forEach(({ poster_path, title, original_name }) => {
@@ -18,6 +19,7 @@ export function SearchedItems({ items }) {
   if (searchTerm !== '') {
     allItems = allItems.filter((item) => item.name.toLowerCase().includes(searchTerm))
   }
+
   return (
     <div className="searched-container">
       <h2 className="searched-title">Resultados para: {searchTerm}</h2>

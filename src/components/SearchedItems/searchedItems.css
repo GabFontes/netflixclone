@@ -1,5 +1,5 @@
 .searched-container {
-    padding-top: 150px;
+    padding-top: 100px;
 
 }
 
@@ -19,14 +19,15 @@
     transition: all ease 0.3s;
 }
 
-.searched-item:hover {
-    transform: scale(1.1);
-}
-
 .searched-item-img {
     border-radius: 1%;
     width: 100%;
 }
+
+.searched-item:hover {
+    transform: scale(1.1);
+}
+
 
 .searched-title {
     padding-left: 50px;

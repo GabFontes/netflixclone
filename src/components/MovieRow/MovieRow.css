@@ -19,15 +19,16 @@
     display: inline-block;
     width: 150px;
     cursor: pointer;
-}
-
-.movieRow-item img {
-    width: 100%;
     transform: scale(0.9);
     transition: all ease 0.3s;
 }
 
-.movieRow-item img:hover {
+.movieRow-item img {
+    border-radius: 1%;
+    width: 100%;
+}
+
+.movieRow-item:hover {
     transform: scale(1);
 }
 
