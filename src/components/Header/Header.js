@@ -23,20 +23,21 @@ export const Header = ({ black }) => {
       <div className="header-user">
         <div className={enableInput ? "header-search-body" : ''}>
           <SearchIcon className="search-icon"
-            onBlur={() => setEnableInput(!enableInput)}
             onClick={() => setEnableInput(!enableInput)}
             style={{ fontSize: 30 }}
           />
-          {enableInput && <input
-            autoFocus
-            type="text"
-            id="movieSearch"
-            placeholder="Buscar por filmes e séries"
-            value={searchTerm}
-            onChange={({ target: { value } }) => {
-              setSearchTerm(value); navigate('/search');
-            }}
-          />}
+          {enableInput &&
+            <input
+              autoFocus
+              type="text"
+              id="movieSearch"
+              placeholder="Buscar por filmes e séries"
+              value={searchTerm}
+              onChange={({ target: { value } }) => {
+                setSearchTerm(value); navigate('/search');
+              }}
+            />
+          }
         </div>
         <a className="user-icon" href="/">
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User Icon" />

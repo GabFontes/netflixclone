@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './MovieRow.css'
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { MovieInfo } from '../MovieInfo/MovieInfo';
 
 export const MovieRow = ({ title, items }) => {
   const [scrollX, setScrollX] = useState(0);
@@ -39,7 +40,7 @@ export const MovieRow = ({ title, items }) => {
 
         }}>
           {items.results.length > 0 && items.results.map((item, key) => (
-            <div key={key} className="movieRow-item">
+            <div key={key} id={item.id} className="movieRow-item" onClick={<MovieInfo activate={true} />}>
               <img alt={item.original_name} src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} />
             </div>
           ))}
