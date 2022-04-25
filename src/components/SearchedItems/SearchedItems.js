@@ -17,7 +17,7 @@ export function SearchedItems({ items }) {
   })
 
   if (searchTerm !== '') {
-    allItems = allItems.filter((item) => item.name.toLowerCase().includes(searchTerm))
+    allItems = allItems.filter((item) => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
   }
 
   return (
