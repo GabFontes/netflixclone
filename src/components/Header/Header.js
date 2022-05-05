@@ -3,7 +3,7 @@ import './Header.css';
 import moviesContext from '../../context/MoviesContext';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
-import netflixlogo from '../../icons/netflix-logo.png';
+import netflixlogo from '../../icons/netflix.png';
 
 export const Header = ({ black }) => {
 
