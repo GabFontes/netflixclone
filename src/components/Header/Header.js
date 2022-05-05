@@ -3,6 +3,7 @@ import './Header.css';
 import moviesContext from '../../context/MoviesContext';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
+import netflixlogo from '../../icons/netflix-logo.png';
 
 export const Header = ({ black }) => {
 
@@ -16,7 +17,7 @@ export const Header = ({ black }) => {
         <a href="/">
           <img
             onClick={() => navigate('/')}
-            src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg"
+            src={netflixlogo}
             alt="Netflix Logo" />
         </a>
       </div>
